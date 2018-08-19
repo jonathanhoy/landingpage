@@ -20,12 +20,21 @@ header {
 .navLinks {
 	position: relative;
 }
+
 .navLinks::after {
 	content: '|';
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 }
+
+.navLinks a, .socialLinks a {
+	padding: 5px 0;
+	&:hover {
+		font-weight: bold;
+	}
+}
+
 .navLinks li {
 	margin-right: 20px;
 	position: relative;
@@ -33,4 +42,9 @@ header {
 
 .socialLinks li {
 	margin-left: 10px;
+}
+
+.socialLinks a:hover {
+	color: $accentColor;
+	transition: color 0.3s;
 }

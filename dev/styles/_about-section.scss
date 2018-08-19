@@ -1,0 +1,37 @@
+.headerStyling {
+	display: grid;
+	grid-template-columns: 1fr 10% 1fr;
+	grid-column-gap: 15px;
+	align-items: center;
+}
+
+.headerStyling h2 {
+	grid-column: 2/3;
+	text-align: center;
+}
+
+.lineBefore {
+	grid-column: 1/2;
+	position: relative;
+}
+
+.lineBefore span::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	border: 1px solid $secondaryColor;
+}
+
+.lineAfter {
+	grid-column: 3/4;
+	position: relative;
+}
+
+.lineAfter span::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	border: 1px solid $secondaryColor;
+}

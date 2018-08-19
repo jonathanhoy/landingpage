@@ -2,6 +2,7 @@
 
 $primaryColor: #000000;
 $secondaryColor: #808080;
+$accentColor: #ce2029;
 
 
 // headings
@@ -17,6 +18,11 @@ h1, h2, h3 {
 h1 {
 	font-size: 2rem;
 	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.6rem;
 	text-transform: uppercase;
 }
 
