@@ -1,0 +1,36 @@
+header {
+	border-bottom: 1px solid $secondaryColor;
+}
+
+.headerLinks {
+	display: flex;
+	justify-content: space-between;
+	ul {
+		list-style: none;
+		display: flex;
+		padding: 0;
+		margin: 15px 0;
+		a {
+			text-decoration: none;
+			color: $primaryColor;
+		}
+	}
+}
+
+.navLinks {
+	position: relative;
+}
+.navLinks::after {
+	content: '|';
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.navLinks li {
+	margin-right: 20px;
+	position: relative;
+}
+
+.socialLinks li {
+	margin-left: 10px;
+}

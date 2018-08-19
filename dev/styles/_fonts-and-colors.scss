@@ -1,0 +1,29 @@
+// COLOURS
+
+$primaryColor: #000000;
+$secondaryColor: #808080;
+
+
+// headings
+// font-family: 'Raleway', sans-serif;
+
+// body
+// font-family: 'Noto Serif', serif;
+
+h1, h2, h3 {
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+a, ul, li {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1rem;
+	text-transform: uppercase;
+	list-style: none;
+	text-decoration: none;
+}
