@@ -6,6 +6,8 @@
 	column-count: 3;
 	column-width: 33.33%;
 	column-gap: 30px;
+	margin-top: 30px;
+	margin-bottom: 40px;
 }
 
 figure {
@@ -48,7 +50,7 @@ figure:hover figcaption {
 		text-decoration: none;
 		color: white;
 		&:hover {
-			border-bottom: 1px solid white;
+			font-weight: bold;
 		}
 	}
 }

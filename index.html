@@ -27,7 +27,7 @@
 	<div class="wrapper">
 		<main>
 			<h1 class="title">HackerYou</h1>
-			<nav class="navUpper">
+			<nav class="navigation navUpper">
 				<ul>
 					<li><a href="https://hackeryou.com/" target="_blank">Home</a></li>
 					<li><a href="https://hackeryou.com/about" target="_blank">About</a></li>
@@ -233,33 +233,35 @@
 			</div>
 		</section>
 	</div>
-	<section id="navContact">
-		<h3>Subscribe to our newsletter</h3>
+	<section id="navContact" class="contact">
+		<h4>Subscribe to our newsletter</h4>
 		<form action="">
-			<label for="email"></label>
-			<input type="email" id="email" placeholder="email address">
+			<label for="email" class="visuallyhidden"></label>
+			<input type="email" id="email" placeholder="email address" required="true">
 			<input type="submit" value="subscribe">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed diam nonummy.</p>
 		</form>
-		<nav class="navLower">
-			<ul>
-				<li><a href="https://hackeryou.com/" target="_blank">Home</a></li>
-				<li><a href="https://hackeryou.com/about" target="_blank">About</a></li>
-				<li><a href="https://hackeryou.com/contact" target="_blank">Contact</a></li>
-				<li><a href="https://hackeryou.com/courses/bootcamp" target="_blank">Bootcamp</a></li>
-				<li><a href="https://hackeryou.com/courses/web-development#courses" target="_blank">Part-Time</a></li>
-			</ul>
-		</nav>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed diam nonummy.</p>
 	</section>
+	<nav class="navigation navLower">
+		<ul>
+			<li><a href="https://hackeryou.com/" target="_blank">Home</a></li>
+			<li><a href="https://hackeryou.com/about" target="_blank">About</a></li>
+			<li><a href="https://hackeryou.com/contact" target="_blank">Contact</a></li>
+			<li><a href="https://hackeryou.com/courses/bootcamp" target="_blank">Bootcamp</a></li>
+			<li><a href="https://hackeryou.com/courses/web-development#courses" target="_blank">Part-Time</a></li>
+		</ul>
+	</nav>
 	<footer>
 		<div class="wrapper">
-			<p>&copy; 2018 <a href="https://hackeryou.com/" target="_blank">HackerYou</a></p>
-			<ul class="socialLinks">
-				<li><a href="https://twitter.com/hackeryou" target="_blank"><i class="fab fa-twitter"></i></a></li>
-				<li><a href="https://www.instagram.com/thisishackeryou/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-				<li><a href="https://www.facebook.com/thisishackeryou/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-				<li><a href="https://hackeryou.com/" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
-			</ul>
+			<div class="footerContainer">
+				<p>&copy; 2018 <a href="https://hackeryou.com/" target="_blank">HackerYou</a></p>
+				<ul class="socialLinks">
+					<li><a href="https://twitter.com/hackeryou" target="_blank"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="https://www.instagram.com/thisishackeryou/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+					<li><a href="https://www.facebook.com/thisishackeryou/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="https://hackeryou.com/" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+				</ul>
+			</div>
 		</div>
 	</footer>
 

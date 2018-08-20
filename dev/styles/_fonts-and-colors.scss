@@ -11,7 +11,7 @@ $accentColor: #ce2029;
 // body
 // font-family: 'Noto Serif', serif;
 
-h1, h2, h3, a, ul, li, p {
+h1, h2, h3, h4, a, ul, li, p {
 	font-family: 'Raleway', sans-serif;
 }
 
@@ -23,6 +23,11 @@ h1 {
 
 h2, h3 {
 	font-size: 1.6rem;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-size: 1.2rem;
 	text-transform: uppercase;
 }
 

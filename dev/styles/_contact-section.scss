@@ -1,0 +1,37 @@
+.contact {
+	text-align: center;
+	border-top: 1px solid $secondaryColor;
+	padding-top: 50px;
+}
+
+.contact form {
+	width: 35%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-gap: 10px;
+	input[type=email] {
+		grid-column: 1/2;
+		font-family: 'Noto Serif', serif;
+		font-style: italic;
+		color: $primaryColor;
+	}
+	input[type=submit] {
+		grid-column: 2/3;
+		font-family: 'Raleway', sans-serif;
+		text-transform: uppercase;
+		&:hover {
+			color: $accentColor;
+			border: 1px solid $accentColor;
+		}
+	}
+	input[type=email], input[type=submit] {
+		border: 1px solid $primaryColor;
+		text-align: center;
+		padding: 10px;
+	}
+}
+
+.contact p {
+	font-size: 0.7rem;
+}

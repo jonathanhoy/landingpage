@@ -131,6 +131,19 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
 img {
   display: block;
   max-width: 100%; }
@@ -140,7 +153,7 @@ img {
   width: 95%;
   margin: 0 auto; }
 
-h1, h2, h3, a, ul, li, p {
+h1, h2, h3, h4, a, ul, li, p {
   font-family: 'Raleway', sans-serif; }
 
 h1 {
@@ -150,6 +163,10 @@ h1 {
 
 h2, h3 {
   font-size: 1.6rem;
+  text-transform: uppercase; }
+
+h4 {
+  font-size: 1.2rem;
   text-transform: uppercase; }
 
 a, ul, li {
@@ -210,7 +227,7 @@ header {
   text-align: center;
   margin: 30px 0; }
 
-.navUpper ul {
+.navigation ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,13 +239,13 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  .navUpper ul li {
+  .navigation ul li {
     padding: 0 10px; }
 
-.navUpper a {
+.navigation a {
   padding: 5px;
   color: #000000; }
-  .navUpper a:hover {
+  .navigation a:hover {
     font-weight: bold; }
 
 main img {
@@ -288,7 +305,9 @@ main img {
   -webkit-column-width: 33.33%;
           column-width: 33.33%;
   -webkit-column-gap: 30px;
-          column-gap: 30px; }
+          column-gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px; }
 
 figure {
   margin-top: 30px;
@@ -325,7 +344,7 @@ figure:hover figcaption {
     text-decoration: none;
     color: white; }
     .overlay a:hover {
-      border-bottom: 1px solid white; }
+      font-weight: bold; }
 
 .overlayStyling {
   display: grid;
@@ -364,3 +383,64 @@ figure:hover figcaption {
 .overlayAfter {
   grid-column: 3/4;
   position: relative; }
+
+.contact {
+  text-align: center;
+  border-top: 1px solid #808080;
+  padding-top: 50px; }
+
+.contact form {
+  width: 35%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px; }
+  .contact form input[type=email] {
+    grid-column: 1/2;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    color: #000000; }
+  .contact form input[type=submit] {
+    grid-column: 2/3;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase; }
+    .contact form input[type=submit]:hover {
+      color: #ce2029;
+      border: 1px solid #ce2029; }
+  .contact form input[type=email], .contact form input[type=submit] {
+    border: 1px solid #000000;
+    text-align: center;
+    padding: 10px; }
+
+.contact p {
+  font-size: 0.7rem; }
+
+.navLower ul {
+  margin-top: 50px;
+  padding: 20px 0; }
+
+.footerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px; }
+
+.footerContainer p {
+  font-weight: bold;
+  color: #000000; }
+  .footerContainer p a {
+    color: #000000; }
+
+.footerContainer .socialLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .footerContainer .socialLinks a {
+    color: #000000; }
+    .footerContainer .socialLinks a:hover {
+      color: #ce2029;
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s; }
