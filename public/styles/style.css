@@ -387,7 +387,7 @@ figure:hover figcaption {
 .contact {
   text-align: center;
   border-top: 1px solid #808080;
-  padding-top: 50px; }
+  padding: 50px 0; }
 
 .contact form {
   width: 35%;
@@ -403,10 +403,14 @@ figure:hover figcaption {
   .contact form input[type=submit] {
     grid-column: 2/3;
     font-family: 'Raleway', sans-serif;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
     .contact form input[type=submit]:hover {
       color: #ce2029;
       border: 1px solid #ce2029; }
+    .contact form input[type=submit]:active {
+      background-color: #f6c4c7; }
   .contact form input[type=email], .contact form input[type=submit] {
     border: 1px solid #000000;
     text-align: center;
@@ -416,7 +420,6 @@ figure:hover figcaption {
   font-size: 0.7rem; }
 
 .navLower ul {
-  margin-top: 50px;
   padding: 20px 0; }
 
 .footerContainer {
@@ -426,7 +429,7 @@ figure:hover figcaption {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 15px; }
+  padding: 15px 0; }
 
 .footerContainer p {
   font-weight: bold;

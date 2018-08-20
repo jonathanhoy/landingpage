@@ -1,7 +1,7 @@
 .contact {
 	text-align: center;
 	border-top: 1px solid $secondaryColor;
-	padding-top: 50px;
+	padding: 50px 0;
 }
 
 .contact form {
@@ -20,9 +20,13 @@
 		grid-column: 2/3;
 		font-family: 'Raleway', sans-serif;
 		text-transform: uppercase;
+		transition: all 0.3s;
 		&:hover {
 			color: $accentColor;
 			border: 1px solid $accentColor;
+		}
+		&:active {
+			background-color: lighten($accentColor, 40);
 		}
 	}
 	input[type=email], input[type=submit] {
