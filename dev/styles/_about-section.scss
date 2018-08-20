@@ -1,4 +1,5 @@
 .headerStyling {
+	margin-top: 30px;
 	display: grid;
 	grid-template-columns: 1fr 10% 1fr;
 	grid-column-gap: 15px;
@@ -20,7 +21,7 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	border: 1px solid $secondaryColor;
+	border-bottom: 1px solid $secondaryColor;
 }
 
 .lineAfter {
@@ -33,14 +34,14 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	border: 1px solid $secondaryColor;
+	border-bottom: 1px solid $secondaryColor;
 }
 
 .columns {
 	column-count: 3;
 	column-gap: 30px;
 	p {
-		margin: 0 0 15px 0;
+		margin: 0 0 10px 0;
 		line-height: 1.75;
 		text-align: justify;
 	}
