@@ -8,12 +8,13 @@
 	margin-top: 0;
 }
 
-.contact form {
-	width: 35%;
-	margin: 0 auto;
+.contactForm {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	grid-gap: 5px;
+	justify-content: center;
+	width: 35%;
+	margin: 0 auto;
 	input[type=email] {
 		grid-column: 1/2;
 		font-family: 'Noto Serif', serif;
@@ -40,4 +41,8 @@
 
 .contact p {
 	font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+
 }

@@ -16,6 +16,12 @@
 	background: none;
 	border: 1px solid $primaryColor;
 	padding: 10px 15px;
+	transition: all 0.3s;
+	&:hover {
+		color: darken($accentColor, 10);
+		border: 1px solid darken($accentColor, 10);
+		background-color: lighten($accentColor, 40);
+	}
 }
 
 figure {
