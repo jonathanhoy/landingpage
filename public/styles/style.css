@@ -140,7 +140,7 @@ img {
   width: 95%;
   margin: 0 auto; }
 
-h1, h2, h3 {
+h1, h2, h3, a, ul, li, p {
   font-family: 'Raleway', sans-serif; }
 
 h1 {
@@ -153,7 +153,6 @@ h2 {
   text-transform: uppercase; }
 
 a, ul, li {
-  font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
   list-style: none;
@@ -268,6 +267,16 @@ main img {
   left: 0;
   right: 0;
   border: 1px solid #808080; }
+
+.columns {
+  -webkit-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 30px;
+          column-gap: 30px; }
+  .columns p {
+    margin: 0 0 15px 0;
+    line-height: 1.75;
+    text-align: justify; }
 
 .imageGallery {
   display: -webkit-box;
