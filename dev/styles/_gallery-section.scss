@@ -10,12 +10,24 @@
 	margin-bottom: 40px;
 }
 
+.showOverflow {
+	display: none;
+	margin: 0 auto 30px auto;
+	background: none;
+	border: 1px solid $primaryColor;
+	padding: 10px 15px;
+}
+
 figure {
 	margin-top: 30px;
 	&:first-child {
 		margin-top: 0;
 	}
 	position: relative;
+}
+
+.galleryOverflow figure:first-child {
+	margin-top: 30px;
 }
 
 figcaption {
@@ -50,7 +62,7 @@ figure:hover figcaption {
 		text-decoration: none;
 		color: white;
 		&:hover {
-			font-weight: bold;
+			border-bottom: 1px solid white;
 		}
 	}
 }
@@ -97,7 +109,24 @@ figure:hover figcaption {
 	position: relative;
 }
 
-
+@media (max-width: 768px) {
+	.imageGallery {
+		column-count: 2;
+		column-gap: 15px;
+		figure {
+			margin-top: 15px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+	.galleryOverflow.hidden {
+		display: none;
+	}
+	.showOverflow {
+		display: block;
+	}
+}
 
 
 

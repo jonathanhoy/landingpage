@@ -47,3 +47,12 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.headerStyling {
+		grid-template-columns: 1fr 20% 1fr;
+	}
+	.columns {
+		column-count: 2;
+		column-gap: 15px;
+	}
+}

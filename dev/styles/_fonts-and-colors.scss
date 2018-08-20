@@ -11,7 +11,7 @@ $accentColor: #ce2029;
 // body
 // font-family: 'Noto Serif', serif;
 
-h1, h2, h3, h4, a, ul, li, p {
+h1, h2, h3, h4, a, ul, li, p, button {
 	font-family: 'Raleway', sans-serif;
 }
 
@@ -31,7 +31,7 @@ h4 {
 	text-transform: uppercase;
 }
 
-a, ul, li {
+a, ul, li, button {
 	font-size: 1rem;
 	text-transform: uppercase;
 	list-style: none;

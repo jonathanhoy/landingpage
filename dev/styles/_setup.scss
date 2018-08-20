@@ -29,3 +29,18 @@ img {
 	margin: 0 auto;
 }
 
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 4px;
+    z-index: 999;
+    background: lighten(#CE2029, 40);
+    color: darken(#CE2029, 10);
+    border: 1px solid darken(#CE2029, 10);	
+    padding: 10px;
+}
+
+.skip-link:focus {
+    left: 50%;
+    transform: translateX(-50%);
+}

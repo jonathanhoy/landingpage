@@ -4,12 +4,16 @@
 	padding: 50px 0;
 }
 
+.contact h4 {
+	margin-top: 0;
+}
+
 .contact form {
 	width: 35%;
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	grid-gap: 10px;
+	grid-gap: 5px;
 	input[type=email] {
 		grid-column: 1/2;
 		font-family: 'Noto Serif', serif;
@@ -22,10 +26,8 @@
 		text-transform: uppercase;
 		transition: all 0.3s;
 		&:hover {
-			color: $accentColor;
-			border: 1px solid $accentColor;
-		}
-		&:active {
+			color: darken($accentColor, 10);
+			border: 1px solid darken($accentColor, 10);
 			background-color: lighten($accentColor, 40);
 		}
 	}
