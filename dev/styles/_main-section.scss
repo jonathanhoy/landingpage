@@ -8,12 +8,15 @@
 	padding: 0;
 	margin: 0 auto;
 	padding: 15px 0;
-	border-top: 1px solid $secondaryColor;
-	border-bottom: 1px solid $secondaryColor;
 	justify-content: center;
 	li {
 		padding: 0 10px;
 	}
+}
+
+.navUpper {
+	border-top: 1px solid $secondaryColor;
+	border-bottom: 1px solid $secondaryColor;
 }
 
 .navigation a {
@@ -26,4 +29,13 @@
 
 main img {
 	margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+	.navigation ul {
+		justify-content: space-between;
+		li {
+			padding: 0;
+		}
+	}
 }

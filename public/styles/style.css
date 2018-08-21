@@ -250,13 +250,15 @@ header {
   padding: 0;
   margin: 0 auto;
   padding: 15px 0;
-  border-top: 1px solid #808080;
-  border-bottom: 1px solid #808080;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
   .navigation ul li {
     padding: 0 10px; }
+
+.navUpper {
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid #808080; }
 
 .navigation a {
   padding: 5px;
@@ -267,10 +269,18 @@ header {
 main img {
   margin-top: 30px; }
 
+@media (max-width: 768px) {
+  .navigation ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .navigation ul li {
+      padding: 0; } }
+
 .headerStyling {
   margin-top: 30px;
   display: grid;
-  grid-template-columns: 1fr 10% 1fr;
+  grid-template-columns: 1fr auto 1fr;
   grid-column-gap: 15px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -313,8 +323,6 @@ main img {
     text-align: justify; }
 
 @media (max-width: 768px) {
-  .headerStyling {
-    grid-template-columns: 1fr 20% 1fr; }
   .columns {
     -webkit-column-count: 2;
             column-count: 2;
@@ -480,8 +488,24 @@ figure:hover figcaption {
 .contact p {
   font-size: 0.7rem; }
 
+@media (max-width: 768px) {
+  .contactForm {
+    width: 75%; }
+  .mobileWrapper {
+    width: 95%;
+    margin: 0 auto; } }
+
+.navLower {
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid #808080; }
+
 .navLower ul {
   padding: 20px 0; }
+
+@media (max-width: 768px) {
+  .navLower ul {
+    width: 95%;
+    margin: 0 auto; } }
 
 .footerContainer {
   display: -webkit-box;

@@ -44,5 +44,11 @@
 }
 
 @media (max-width: 768px) {
-
+	.contactForm {
+		width: 75%;
+	}
+	.mobileWrapper {
+		width: 95%;
+		margin: 0 auto;
+	}
 }
