@@ -48,3 +48,18 @@ header {
 	color: $accentColor;
 	transition: color 0.3s;
 }
+
+@media (max-width: 425px) {
+	header {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		background: white;
+		z-index: 200;
+		border-top: 1px solid $secondaryColor;
+		padding: 10px 0;
+	}
+	.socialLinks li {
+		margin-left: 20px;
+	}
+}

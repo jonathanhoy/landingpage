@@ -53,3 +53,18 @@
 		column-gap: 15px;
 	}
 }
+
+@media (max-width: 425px) {
+	.about h2 {
+		margin: 0;
+	}
+	.columns {
+		column-count: 1;
+		p:first-child {
+			margin-top: 15px;
+		}
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
