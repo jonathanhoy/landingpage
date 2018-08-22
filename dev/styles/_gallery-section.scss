@@ -16,6 +16,7 @@
 	border: 1px solid $primaryColor;
 	padding: 10px 15px;
 	transition: all 0.3s;
+	text-transform: uppercase;
 	&:hover {
 		color: darken($accentColor, 10);
 		border: 1px solid darken($accentColor, 10);
@@ -59,59 +60,77 @@ figure:hover figcaption {
 		font-style: italic;
 		font-family: 'Noto Serif', serif;
 		margin: 0;
+		font-size: 0.8rem;
+		position: relative;
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			width: 10%;
+			height: 1px;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: white;
+		}
+		&::before {
+			left: calc(50% - 100px);
+		}
+		&::after {
+			right: calc(50% - 100px);
+		}
 	}
 	a {
 		font-size: 0.7rem;
 		text-decoration: none;
 		color: white;
-		font-weight: bold;
 		&:hover {
 			border-bottom: 1px solid white;
 		}
 	}
 }
 
-.overlayStyling {
-	display: grid;
-	grid-template-columns: 1fr auto 1fr;
-	grid-column-gap: 5px;
-	width: 60%;
-	margin: 0 auto;
-	p {
-		font-size: 0.8rem;
-		grid-column: 2/3;
-	}
-}
 
-.overlayBefore span::before {
-	content: '';
-	border-bottom: 1px solid white;
-	right: 0;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	position: absolute;
-}
 
-.overlayBefore {
-	grid-column: 1/2;
-	position: relative;
-}
+// .overlayStyling {
+// 	display: grid;
+// 	grid-template-columns: 1fr auto 1fr;
+// 	grid-column-gap: 5px;
+// 	width: 60%;
+// 	margin: 0 auto;
+// 	p {
+// 		// font-size: 0.8rem;
+// 		grid-column: 2/3;
+// 	}
+// }
 
-.overlayAfter span::after {
-	content: '';
-	border-bottom: 1px solid white;
-	right: 0;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	position: absolute;
-}
+// .overlayBefore span::before {
+// 	content: '';
+// 	border-bottom: 1px solid white;
+// 	right: 0;
+// 	left: 0;
+// 	top: 50%;
+// 	transform: translateY(-50%);
+// 	position: absolute;
+// }
 
-.overlayAfter {
-	grid-column: 3/4;
-	position: relative;
-}
+// .overlayBefore {
+// 	grid-column: 1/2;
+// 	position: relative;
+// }
+
+// .overlayAfter span::after {
+// 	content: '';
+// 	border-bottom: 1px solid white;
+// 	right: 0;
+// 	left: 0;
+// 	top: 50%;
+// 	transform: translateY(-50%);
+// 	position: absolute;
+// }
+
+// .overlayAfter {
+// 	grid-column: 3/4;
+// 	position: relative;
+// }
 
 @media (max-width: 768px) {
 	.imageGallery {

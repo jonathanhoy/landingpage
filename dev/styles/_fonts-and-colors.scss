@@ -31,9 +31,17 @@ h4 {
 	text-transform: uppercase;
 }
 
-a, ul, li, button {
+a, ul, li {
 	font-size: 1rem;
 	text-transform: uppercase;
 	list-style: none;
 	text-decoration: none;
+}
+
+input {
+	font-size: 0.9rem;
+}
+
+a, input, button {
+	font-weight: 500;
 }

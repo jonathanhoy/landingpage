@@ -26,12 +26,13 @@ header {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
+	font-weight: 500;
 }
 
 .navLinks a {
 	padding: 5px 0;
 	&:hover {
-		font-weight: bold;
+		font-weight: 800;
 	}
 }
 

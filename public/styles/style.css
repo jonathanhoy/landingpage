@@ -162,7 +162,8 @@ img {
   color: #a21920;
   border: 1px solid #a21920;
   padding: 10px;
-  text-align: center; }
+  text-align: center;
+  font-weight: 700; }
 
 .skip-link:focus {
   left: 50%;
@@ -185,11 +186,17 @@ h4 {
   font-size: 1.1rem;
   text-transform: uppercase; }
 
-a, ul, li, button {
+a, ul, li {
   font-size: 1rem;
   text-transform: uppercase;
   list-style: none;
   text-decoration: none; }
+
+input {
+  font-size: 0.9rem; }
+
+a, input, button {
+  font-weight: 500; }
 
 header {
   border-bottom: 1px solid #808080; }
@@ -220,12 +227,13 @@ header {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%); }
+          transform: translateX(-50%);
+  font-weight: 500; }
 
 .navLinks a {
   padding: 5px 0; }
   .navLinks a:hover {
-    font-weight: bold; }
+    font-weight: 800; }
 
 .navLinks li {
   margin-right: 20px;
@@ -296,7 +304,7 @@ header {
   padding: 5px;
   color: #000000; }
   .navigation a:hover {
-    font-weight: bold; }
+    font-weight: 800; }
 
 main img {
   margin-top: 30px; }
@@ -354,40 +362,26 @@ main img {
   .navUpper.hidden {
     left: 1000px; } }
 
-.headerStyling {
+.heading {
   margin-top: 30px;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  grid-column-gap: 15px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-
-.headerStyling h2 {
-  grid-column: 2/3;
-  text-align: center; }
-
-.lineBefore {
-  grid-column: 1/2;
+  text-align: center;
   position: relative; }
 
-.lineBefore span::before {
+.heading::before, .heading::after {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  border-bottom: 1px solid #808080; }
+  width: calc(50% - 80px);
+  height: 1px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #808080; }
 
-.lineAfter {
-  grid-column: 3/4;
-  position: relative; }
+.heading::before {
+  left: 0; }
 
-.lineAfter span::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  border-bottom: 1px solid #808080; }
+.heading::after {
+  right: 0; }
 
 .columns {
   -webkit-column-count: 3;
@@ -396,8 +390,9 @@ main img {
           column-gap: 30px; }
   .columns p {
     margin: 0 0 10px 0;
-    line-height: 1.75;
-    text-align: justify; }
+    line-height: 1.8;
+    text-align: justify;
+    font-weight: 500; }
 
 @media (max-width: 768px) {
   .columns {
@@ -436,7 +431,8 @@ main img {
   border: 1px solid #000000;
   padding: 10px 15px;
   -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  text-transform: uppercase; }
   .toggleOverflow:hover {
     color: #a21920;
     border: 1px solid #a21920;
@@ -473,52 +469,28 @@ figure:hover figcaption {
     text-transform: lowercase;
     font-style: italic;
     font-family: 'Noto Serif', serif;
-    margin: 0; }
+    margin: 0;
+    font-size: 0.8rem;
+    position: relative; }
+    .overlay p::before, .overlay p::after {
+      content: '';
+      position: absolute;
+      width: 10%;
+      height: 1px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      background-color: white; }
+    .overlay p::before {
+      left: calc(50% - 100px); }
+    .overlay p::after {
+      right: calc(50% - 100px); }
   .overlay a {
     font-size: 0.7rem;
     text-decoration: none;
-    color: white;
-    font-weight: bold; }
+    color: white; }
     .overlay a:hover {
       border-bottom: 1px solid white; }
-
-.overlayStyling {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  grid-column-gap: 5px;
-  width: 60%;
-  margin: 0 auto; }
-  .overlayStyling p {
-    font-size: 0.8rem;
-    grid-column: 2/3; }
-
-.overlayBefore span::before {
-  content: '';
-  border-bottom: 1px solid white;
-  right: 0;
-  left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  position: absolute; }
-
-.overlayBefore {
-  grid-column: 1/2;
-  position: relative; }
-
-.overlayAfter span::after {
-  content: '';
-  border-bottom: 1px solid white;
-  right: 0;
-  left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  position: absolute; }
-
-.overlayAfter {
-  grid-column: 3/4;
-  position: relative; }
 
 @media (max-width: 768px) {
   .imageGallery {
@@ -640,6 +612,7 @@ figure:hover figcaption {
   font-weight: bold;
   color: #000000; }
   .footerContainer p a {
+    font-weight: 700;
     color: #000000; }
 
 .footerContainer .socialLinks {
