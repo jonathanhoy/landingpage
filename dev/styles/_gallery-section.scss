@@ -58,10 +58,13 @@ figure:hover figcaption {
 		text-transform: lowercase;
 		font-style: italic;
 		font-family: 'Noto Serif', serif;
+		margin: 0;
 	}
 	a {
+		font-size: 0.7rem;
 		text-decoration: none;
 		color: white;
+		font-weight: bold;
 		&:hover {
 			border-bottom: 1px solid white;
 		}
@@ -132,6 +135,14 @@ figure:hover figcaption {
 @media (max-width: 425px) {
 	.gallery h2 {
 		margin: 0;
+	}
+	.overlay {
+		p {
+			margin: 15px 0;
+		}
+		a, p {
+			font-size: 1rem;
+		}
 	}
 	.imageGallery {
 		column-count: 1;

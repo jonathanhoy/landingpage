@@ -182,7 +182,7 @@ h2, h3 {
   text-transform: uppercase; }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-transform: uppercase; }
 
 a, ul, li, button {
@@ -273,7 +273,7 @@ header {
 
 .title {
   text-align: center;
-  margin: 30px 0; }
+  margin: 40px 0; }
 
 .navigation ul {
   display: -webkit-box;
@@ -325,7 +325,7 @@ main img {
     left: 0;
     right: 0;
     z-index: 200;
-    background: white;
+    background: lightgrey;
     border: none;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in; }
@@ -472,10 +472,13 @@ figure:hover figcaption {
   .overlay p {
     text-transform: lowercase;
     font-style: italic;
-    font-family: 'Noto Serif', serif; }
+    font-family: 'Noto Serif', serif;
+    margin: 0; }
   .overlay a {
+    font-size: 0.7rem;
     text-decoration: none;
-    color: white; }
+    color: white;
+    font-weight: bold; }
     .overlay a:hover {
       border-bottom: 1px solid white; }
 
@@ -535,6 +538,10 @@ figure:hover figcaption {
 @media (max-width: 425px) {
   .gallery h2 {
     margin: 0; }
+  .overlay p {
+    margin: 15px 0; }
+  .overlay a, .overlay p {
+    font-size: 1rem; }
   .imageGallery {
     -webkit-column-count: 1;
             column-count: 1;
@@ -569,6 +576,7 @@ figure:hover figcaption {
     grid-column: 2/3;
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
+    background-color: white;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     .contactForm input[type=submit]:hover {
@@ -647,6 +655,7 @@ figure:hover figcaption {
 
 @media (max-width: 425px) {
   footer {
+    background: lightgrey;
     margin-bottom: 76px;
     border-bottom: 1px solid #808080; }
     footer .footerContainer {

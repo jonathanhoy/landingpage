@@ -26,6 +26,7 @@
 		grid-column: 2/3;
 		font-family: 'Raleway', sans-serif;
 		text-transform: uppercase;
+		background-color: white;
 		transition: all 0.3s;
 		&:hover {
 			color: darken($accentColor, 10);
