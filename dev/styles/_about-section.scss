@@ -1,5 +1,5 @@
 .heading {
-	margin-top: 30px;
+	margin: 30px 0;
 	text-align: center;
 	position: relative;
 	&.heading::before, &.heading::after {
@@ -7,7 +7,7 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		width: calc(50% - 80px);
+		width: calc(50% - 70px);
 		height: 1px;
 		background-color: $secondaryColor;
 	}
@@ -25,6 +25,7 @@
 .columns {
 	column-count: 3;
 	column-gap: 30px;
+	margin-bottom: 60px;
 	p {
 		margin: 0 0 10px 0;
 		line-height: 1.8;

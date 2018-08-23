@@ -5,13 +5,17 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+html {
+	font-size: 62.5%;
+}
+
 img {
 	display: block;
 	max-width: 100%;
 }
 
 .wrapper {
-	max-width: 1200px;
+	max-width: 1152px;
 	width: 95%;
 	margin: 0 auto;
 }

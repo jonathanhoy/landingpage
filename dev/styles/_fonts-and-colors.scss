@@ -5,10 +5,11 @@ $secondaryColor: #808080;
 $accentColor: #ce2029;
 
 
-// headings
-// font-family: 'Raleway', sans-serif;
 
-// body
+
+// FONT & FONT-SIZE
+
+// font-family: 'Raleway', sans-serif;
 // font-family: 'Noto Serif', serif;
 
 h1, h2, h3, h4, ul, li, a, p, button {
@@ -20,26 +21,26 @@ h1, h2, h3, h4, ul, li, a  {
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 3.2rem;
 	font-weight: 700;
 }
 
 h2, h3 {
-	font-size: 1.6rem;
+	font-size: 2.4rem;
 }
 
 h4 {
-	font-size: 1.1rem;
+	font-size: 1.8rem;
 }
 
-a, ul, li {
-	font-size: 1rem;
+ul, li, a, p, {
+	font-size: 1.6rem;
 	list-style: none;
 	text-decoration: none;
 }
 
-input {
-	font-size: 0.9rem;
+input, button {
+	font-size: 1.4rem;
 }
 
 a, input, button {

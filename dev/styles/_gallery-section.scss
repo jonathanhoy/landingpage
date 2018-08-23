@@ -68,13 +68,13 @@
 		font-style: italic;
 		font-family: 'Noto Serif', serif;
 		margin: 5px 0;
-		font-size: 0.8rem;
+		font-size: 1.2rem;
 		position: relative;
 		&::before, &::after {
 			content: '';
 			position: absolute;
 			width: 40%;
-			height: 2px;
+			height: 1px;
 			top: 50%;
 			transform: translateY(-50%);
 			background-color: white;
@@ -87,7 +87,7 @@
 		}
 	}
 	a {
-		font-size: 0.7rem;
+		font-size: 1.2rem;
 		text-decoration: none;
 		color: white;
 		&:hover {
