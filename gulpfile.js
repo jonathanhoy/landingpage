@@ -23,7 +23,7 @@ gulp.task('js', () => {
         }))
         .pipe(source('main.js'))
         .pipe(buffer())
-        .pipe(gulp.dest('public/scripts'))
+        .pipe(gulp.dest('./public/scripts'))
 });
 
 gulp.task('styles', () => {

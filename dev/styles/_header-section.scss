@@ -1,88 +1,87 @@
-header {
-	border-bottom: 1px solid $secondaryColor;
+.title {
+	text-align: center;
+	margin: 40px 0;
 }
 
-.headerLinks {
+.navigation ul {
 	display: flex;
-	justify-content: space-between;
-	ul {
-		list-style: none;
-		display: flex;
-		padding: 0;
-		margin: 15px 0;
-		a {
-			text-decoration: none;
-			color: $primaryColor;
-		}
+	padding: 0;
+	margin: 0 auto;
+	padding: 15px 0;
+	justify-content: center;
+	li {
+		padding: 0 10px;
 	}
 }
 
-.navLinks {
-	position: relative;
+.navUpper {
+	border-top: 1px solid $secondaryColor;
+	border-bottom: 1px solid $secondaryColor;
 }
 
-.navLinks::after {
-	content: '|';
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	font-weight: 500;
-}
-
-.navLinks a {
-	padding: 5px 0;
+.navigation a {
+	padding: 5px;
+	color: $primaryColor;
 	&:hover {
 		font-weight: 800;
 	}
 }
 
-.navLinks li {
-	margin-right: 20px;
-	position: relative;
+header img {
+	margin-top: 30px;
 }
 
-.mobileMenu {
-	display: none;
-}
-
-.socialLinks li {
-	margin-left: 10px;
-}
-
-.socialLinks a:hover {
-	color: $accentColor;
-	transition: color 0.3s;
+@media (max-width: 768px) {
+	.navigation ul {
+		justify-content: space-between;
+		li {
+			padding: 0;
+		}
+		a {
+			padding: 0;
+		}
+	}
 }
 
 @media (max-width: 425px) {
-	header {
+	.title {
+		margin-top: 15px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid $secondaryColor;
+	}
+	header img {
+		margin-top: 0;
+	}
+	.navUpper {
 		position: fixed;
-		bottom: 0;
-		width: 100%;
-		background: white;
+		top: 0;
+		bottom: 77px;
+		left: 0;
+		right: 0;
 		z-index: 200;
-		border-top: 1px solid $secondaryColor;
-		padding: 10px 0;
-	}
-	header i {
-		font-size: 1.5rem;
-	}
-	.socialLinks {
-		width: 50%;
-		text-align: right;
-		display: flex;
-		justify-content: space-between;
-		li {
-			margin: 0;
+		background: lightgrey;
+		border: none;
+		transition: all 0.3s ease-in;
+		ul {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			transform: translateY(-50%);
+			li {
+				margin-bottom: 20px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				a {
+					font-size: 2rem;
+				}			
+			}
 		}
 	}
-	.navLinks::after {
-		display: none;
-	}
-	.navLinks li:first-child, .navLinks li:nth-child(2) {
-		display: none;
-	}
-	.mobileMenu {
-		display: block;
+	.navUpper.hidden {
+		left: 1000px;
 	}
 }
