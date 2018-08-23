@@ -5,19 +5,6 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.visuallyhidden:not(:focus):not(:active) {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
-}
-
 img {
 	display: block;
 	max-width: 100%;
@@ -30,19 +17,31 @@ img {
 }
 
 .skip-link {
-    position: absolute;
-    left: -1000px;
-    top: 4px;
-    z-index: 999;
-    background: lighten(#CE2029, 40);
-    color: darken(#CE2029, 10);
-    border: 1px solid darken(#CE2029, 10);	
-    padding: 10px;
-    text-align: center;
-    font-weight: 700;
+  position: absolute;
+  left: -1000px;
+  top: 4px;
+  z-index: 999;
+  background: lighten(#CE2029, 40);
+  color: darken(#CE2029, 10);
+  border: 1px solid darken(#CE2029, 10);	
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  &:focus {
+  	left: 50%;
+  	transform: translateX(-50%);
+  }
 }
 
-.skip-link:focus {
-    left: 50%;
-    transform: translateX(-50%);
+.visuallyhidden:not(:focus):not(:active) {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
