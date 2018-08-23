@@ -1,53 +1,5 @@
-.navLower {
-	border-top: 1px solid $secondaryColor;
-	border-bottom: 1px solid $secondaryColor;
-}
-
-.navLower ul {
-	padding: 20px 0;
-}
-
-@media (max-width: 768px) {
-	.navLower ul {
-		width: 95%;
-		margin: 0 auto;
-	}
-}
-
-@media (max-width: 425px) {
-	.navLower {
-		display: none;
-	}
-}
-
-.footerContainer {
-	display: flex;
-	justify-content: space-between;
-	padding: 10px 0;
-}
-
-.footerContainer p {
-	font-weight: bold;
-	color: $primaryColor;
-	a {
-		font-weight: 700;
-		color: $primaryColor;
-	}
-}
-
-.footerContainer .socialLinks {
-	display: flex;
-	a {
-		color: $primaryColor;
-		&:hover {
-			color: $accentColor;
-			transition: color 0.3s;
-		}
-	}
-}
-
-@media (max-width: 425px) {
-	footer {
+footer {
+	@media (max-width: 425px) {
 		background: lightgrey;
 		margin-bottom: 76px;
 		border-bottom: 1px solid $secondaryColor;
@@ -59,3 +11,90 @@
 		}
 	}
 }
+
+.navLower {
+	ul {
+		padding: 20px 0;
+		@media (max-width: 768px) {
+			width: 95%;
+			margin: 0 auto;
+		}
+	}
+	@media (max-width: 425px) {
+		display: none;
+	}
+}
+
+.footerContainer {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+	p {
+		font-weight: bold;
+		color: $primaryColor;
+		a {
+			font-weight: 700;
+			color: $primaryColor;
+		}
+	}
+	.socialLinks {
+		display: flex;
+		a {
+			color: $primaryColor;
+			&:hover {
+				color: $accentColor;
+				transition: color 0.3s;
+			}
+		}
+	}
+}
+
+
+
+// .footerContainer .socialLinks {
+// 	display: flex;
+// 	a {
+// 		color: $primaryColor;
+// 		&:hover {
+// 			color: $accentColor;
+// 			transition: color 0.3s;
+// 		}
+// 	}
+// // }
+
+// @media (max-width: 425px) {
+// 	footer {
+// 		background: lightgrey;
+// 		margin-bottom: 76px;
+// 		border-bottom: 1px solid $secondaryColor;
+// 		.footerContainer {
+// 			justify-content: center;
+// 			.socialLinks {
+// 				display: none;
+// 			}
+// 		}
+// 	}
+// }
+
+// @media (max-width: 768px) {
+// 	.navLower ul {
+// 		width: 95%;
+// 		margin: 0 auto;
+// 	}
+// }
+
+// @media (max-width: 425px) {
+// 	.navLower {
+// 		display: none;
+// 	}
+// }
+
+
+// .footerContainer p {
+// 	font-weight: bold;
+// 	color: $primaryColor;
+// 	a {
+// 		font-weight: 700;
+// 		color: $primaryColor;
+// 	}
+// }

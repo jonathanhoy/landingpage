@@ -2,10 +2,15 @@
 	text-align: center;
 	border-top: 1px solid $secondaryColor;
 	padding: 50px 0;
-}
-
-.contact h4 {
-	margin-top: 0;
+	h4 {
+		margin-top: 0;
+	}
+	p {
+		font-size: 0.7rem;
+	}
+	@media (max-width: 425px) {
+		border-bottom: 1px solid $secondaryColor;
+	}
 }
 
 .contactForm {
@@ -39,27 +44,10 @@
 		text-align: center;
 		padding: 10px;
 	}
-}
-
-.contact p {
-	font-size: 0.7rem;
-}
-
-@media (max-width: 768px) {
-	.contactForm {
+	@media (max-width: 768px) {
 		width: 75%;
 	}
-	.mobileWrapper {
-		width: 95%;
-		margin: 0 auto;
-	}
-}
-
-@media (max-width: 425px) {
-	.contact {
-		border-bottom: 1px solid $secondaryColor;
-	}
-	.contactForm {
+	@media (max-width: 425px) {
 		width: 100%;
 		grid-row-gap: 10px;
 		input[type=email] {
@@ -73,7 +61,47 @@
 	}
 }
 
+.mobileWrapper {
+	@media (max-width: 768px) {
+		width: 95%;
+		margin: 0 auto;
+	}
+}
+
+// @media (max-width: 768px) {
+// 	// .contactForm {
+// 	// 	width: 75%;
+// 	// }
+// 	// .mobileWrapper {
+// 	// 	width: 95%;
+// 	// 	margin: 0 auto;
+// 	// }
+// }
+
+// @media (max-width: 425px) {
+// 	// .contact {
+// 	// 	border-bottom: 1px solid $secondaryColor;
+// 	// }
+// 	.contactForm {
+// 		width: 100%;
+// 		grid-row-gap: 10px;
+// 		input[type=email] {
+// 			grid-column: 1/3;
+// 			grid-row: 1/2;
+// 		}
+// 		input[type=submit] {
+// 			grid-column: 1/3;
+// 			grid-row: 2/3;
+// 		}
+// 	}
+// }
+
+// .contact h4 {
+// 	margin-top: 0;
+// }
 
 
-
+// .contact p {
+// 	font-size: 0.7rem;
+// }
 

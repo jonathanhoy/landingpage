@@ -6,55 +6,60 @@
 	column-count: 3;
 	column-width: 33.33%;
 	column-gap: 30px;
-	margin: 30px 0;
-}
-
-.toggleOverflow {
-	display: none;
-	margin: 0 auto 30px auto;
-	background: none;
-	border: 1px solid $primaryColor;
-	padding: 10px 15px;
-	transition: all 0.3s;
-	text-transform: uppercase;
-	&:hover {
-		color: darken($accentColor, 10);
-		border: 1px solid darken($accentColor, 10);
-		background-color: lighten($accentColor, 40);
+	margin-bottom: 60px;
+	figure {
+		position: relative;
+		margin-top: 30px;
+		&:first-child {
+			margin-top: 0;
+		}
+		figcaption {
+			display: none;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: rgba(206,32,41,0.8);
+		}
+		&:hover figcaption {
+			display: block;
+		}
 	}
-}
-
-figure {
-	margin-top: 30px;
-	position: relative;
-	&:first-child {
+	@media (max-width: 768px) {
+		column-count: 2;
+		column-gap: 15px;
+		margin-bottom: 0;
+		figure {
+			margin-top: 15px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		figure:nth-child(6) ~ figure {
+			display: none;
+		}
+	}
+	@media (max-width: 425px) {
+		column-count: 1;
 		margin-top: 0;
+		figure {
+			&:first-child {
+				margin-top: 15px;
+			}
+		}
 	}
-	&:hover figcaption {
-		display: block;
-	}
-}
-
-figcaption {
-	display: none;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 100%;
-	background-color: rgba(206,32,41,0.8);
 }
 
 .overlay {
 	position: relative;
-	width: 70%;
-	margin: 0 auto;
 	top: 50%;
 	transform: translateY(-50%);
-	color: white;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+	width: 70%;
+	margin: 0 auto;
+	color: white;
 	h3 {
 		margin: 0;
 	}
@@ -89,32 +94,7 @@ figcaption {
 			font-weight: 700;
 		}
 	}
-}
-
-@media (max-width: 768px) {
-	.imageGallery {
-		column-count: 2;
-		column-gap: 15px;
-		figure {
-			margin-top: 15px;
-			&:first-child {
-				margin-top: 0;
-			}
-		}
-	}
-	figure:nth-child(6) ~ figure {
-		display: none;
-	}
-	.toggleOverflow {
-		display: block;
-	}
-}
-
-@media (max-width: 425px) {
-	.gallery h2 {
-		margin: 0;
-	}
-	.overlay {
+	@media (max-width: 425px) {
 		p {
 			margin: 15px 0;
 		}
@@ -122,19 +102,88 @@ figcaption {
 			font-size: 1rem;
 		}
 	}
-	.imageGallery {
-		column-count: 1;
-		margin-top: 0;
-		figure {
-			&:first-child {
-				margin-top: 15px;
-			}
-		}
+}
+
+.toggleOverflow {
+	display: none;
+	margin: 30px auto;
+	background: none;
+	border: 1px solid $primaryColor;
+	padding: 10px 15px;
+	transition: all 0.3s;
+	text-transform: uppercase;
+	&:hover {
+		color: darken($accentColor, 10);
+		border: 1px solid darken($accentColor, 10);
+		background-color: lighten($accentColor, 40);
+	}
+	@media (max-width: 768px) {
+		display: block;
 	}
 }
 
+// @media (max-width: 425px) {
+// 	// .overlay {
+// 	// 	p {
+// 	// 		margin: 15px 0;
+// 	// 	}
+// 	// 	a, p {
+// 	// 		font-size: 1rem;
+// 	// 	}
+// 	// }
+// 	.imageGallery {
+// 		column-count: 1;
+// 		margin-top: 0;
+// 		figure {
+// 			&:first-child {
+// 				margin-top: 15px;
+// 			}
+// 		}
+// 	}
+// }
 
 
+// @media (max-width: 768px) {
+	// .imageGallery {
+	// 	// column-count: 2;
+	// 	// column-gap: 15px;
+	// 	// figure {
+	// 	// 	margin-top: 15px;
+	// 	// 	&:first-child {
+	// 	// 		margin-top: 0;
+	// 	// 	}
+	// 	// }
+	// }
+	// figure:nth-child(6) ~ figure {
+	// 	display: none;
+	// }
+	// .toggleOverflow {
+	// 	display: block;
+	// }
+// }
+
+
+
+
+// figure {
+// 	margin-top: 30px;
+// 	position: relative;
+// 	&:first-child {
+// 		margin-top: 0;
+// 	}
+// 	&:hover figcaption {
+// 		display: block;
+// 	}
+// }
+
+// figcaption {
+// 	display: none;
+// 	position: absolute;
+// 	top: 0;
+// 	bottom: 0;
+// 	width: 100%;
+// 	background-color: rgba(206,32,41,0.8);
+// }
 
 
 

@@ -1,27 +1,25 @@
-// Heading class referring to both About and Gallery sections
-
 .heading {
 	margin-top: 30px;
 	text-align: center;
 	position: relative;
-}
-
-.heading::before, .heading::after {
-	content: '';
-	position: absolute;
-	width: calc(50% - 80px);
-	height: 1px;
-	top: 50%;
-	transform: translateY(-50%);
-	background-color: $secondaryColor;
-}
-
-.heading::before {
-	left: 0;
-}
-
-.heading::after {
-	right: 0;
+	&.heading::before, &.heading::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: calc(50% - 80px);
+		height: 1px;
+		background-color: $secondaryColor;
+	}
+	&.heading::before {
+		left: 0;
+	}
+	&.heading::after {
+		right: 0;
+	}
+	@media (max-width: 425px) {
+		margin-bottom: 0;
+	}
 }
 
 .columns {
@@ -33,20 +31,11 @@
 		text-align: justify;
 		font-weight: 500;
 	}
-}
-
-@media (max-width: 768px) {
-	.columns {
+	@media (max-width: 768px) {
 		column-count: 2;
 		column-gap: 15px;
 	}
-}
-
-@media (max-width: 425px) {
-	.about h2 {
-		margin-bottom: 0;
-	}
-	.columns {
+	@media (max-width: 425px) {
 		column-count: 1;
 		p:first-child {
 			margin-top: 15px;
@@ -56,3 +45,25 @@
 		}
 	}
 }
+
+// @media (max-width: 768px) {
+// 	// .columns {
+// 	// 	column-count: 2;
+// 	// 	column-gap: 15px;
+// 	// }
+// }
+
+// @media (max-width: 425px) {
+	// .about h2 {
+	// 	// margin-bottom: 0;
+	// }
+// 	.columns {
+// 		column-count: 1;
+// 		p:first-child {
+// 			margin-top: 15px;
+// 		}
+// 		p:last-child {
+// 			margin-bottom: 0;
+// 		}
+// 	}
+// }
