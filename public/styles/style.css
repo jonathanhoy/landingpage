@@ -211,7 +211,7 @@ nav {
       border-top: 1px solid #808080;
       padding: 10px 0; }
       nav i {
-        font-size: 1.5rem; } }
+        font-size: 2.4rem; } }
 
 .linksContainer {
   display: -webkit-box;
@@ -254,7 +254,7 @@ nav {
       display: none; } }
 
 .socialLinks li {
-  margin-left: 10px; }
+  margin-left: 15px; }
   .socialLinks li a:hover {
     color: #ce2029;
     -webkit-transition: color 0.3s;
@@ -303,7 +303,6 @@ nav {
     .navigation ul li {
       padding: 0 10px; }
       .navigation ul li a {
-        padding: 5px;
         color: #000000; }
         .navigation ul li a:hover {
           font-weight: 800; }
@@ -348,13 +347,16 @@ nav {
         .navUpper ul li:last-child {
           margin-bottom: 0; }
         .navUpper ul li a {
-          font-size: 2rem; }
+          font-size: 4rem; }
     .navUpper.hidden {
       left: 1000px; } }
 
 header img {
   margin-top: 30px;
   margin-bottom: 60px; }
+  @media (max-width: 425px) {
+    header img {
+      margin-bottom: 30px; } }
 
 .heading {
   margin: 30px 0;
@@ -397,7 +399,8 @@ header img {
   @media (max-width: 425px) {
     .columns {
       -webkit-column-count: 1;
-              column-count: 1; }
+              column-count: 1;
+      margin-bottom: 30px; }
       .columns p:first-child {
         margin-top: 15px; }
       .columns p:last-child {
@@ -499,7 +502,7 @@ header img {
     .overlay p {
       margin: 15px 0; }
     .overlay a, .overlay p {
-      font-size: 1rem; } }
+      font-size: 1.6rem; } }
 
 .toggleOverflow {
   display: none;
@@ -528,7 +531,8 @@ header img {
     font-size: 1.3rem; }
   @media (max-width: 425px) {
     .contact {
-      border-bottom: 1px solid #808080; } }
+      border-bottom: 1px solid #808080;
+      padding: 30px 0; } }
 
 .contactForm {
   display: grid;
@@ -633,6 +637,9 @@ header img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0; }
     .footerContainer .socialLinks a {
       color: #000000; }
