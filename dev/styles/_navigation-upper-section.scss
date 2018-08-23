@@ -1,5 +1,17 @@
 nav {
 	border-bottom: 1px solid $secondaryColor;
+	@media (max-width: 425px) {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		background: white;
+		z-index: 200;
+		border-top: 1px solid $secondaryColor;
+		padding: 10px 0;
+		i {
+			font-size: 1.5rem;
+		}
+	}
 }
 
 .headerLinks {
@@ -10,64 +22,51 @@ nav {
 		display: flex;
 		padding: 0;
 		margin: 15px 0;
-		// a {
-		// 	text-decoration: none;
-		// 	color: $primaryColor;
-		// }
+		a {
+			text-decoration: none;
+			color: $primaryColor;
+		}
 	}
 }
 
 .navLinks {
 	position: relative;
-}
-
-.navLinks::after {
-	content: '|';
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	font-weight: 500;
-}
-
-.navLinks a {
-	padding: 5px 0;
-	&:hover {
-		font-weight: 800;
+	li {
+		margin-right: 20px;
+		position: relative;
+		a {
+			padding: 5px 0;
+			&:hover {
+				font-weight: 800;
+			}
+		}
+	}
+	&::after {
+		content: '|';
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		font-weight: 500;
+	}
+	@media (max-width: 425px) {
+		&::after {
+			display: none;
+		}
+		&.navLinks li:first-child, &.navLinks li:nth-child(2) {
+			display: none;
+		}
 	}
 }
 
-.navLinks li {
-	margin-right: 20px;
-	position: relative;
-}
-
-.mobileMenu {
-	display: none;
-}
-
-.socialLinks li {
-	margin-left: 10px;
-}
-
-.socialLinks a:hover {
-	color: $accentColor;
-	transition: color 0.3s;
-}
-
-@media (max-width: 425px) {
-	nav {
-		position: fixed;
-		bottom: 0;
-		width: 100%;
-		background: white;
-		z-index: 200;
-		border-top: 1px solid $secondaryColor;
-		padding: 10px 0;
+.socialLinks {
+	li {
+		margin-left: 10px;
+		a:hover {
+			color: $accentColor;
+			transition: color 0.3s;
+		}
 	}
-	nav i {
-		font-size: 1.5rem;
-	}
-	.socialLinks {
+	@media (max-width: 425px) {
 		width: 50%;
 		text-align: right;
 		display: flex;
@@ -76,13 +75,76 @@ nav {
 			margin: 0;
 		}
 	}
-	.navLinks::after {
-		display: none;
-	}
-	.navLinks li:first-child, .navLinks li:nth-child(2) {
-		display: none;
-	}
-	.mobileMenu {
+}
+
+.mobileMenu {
+	display: none;
+	@media (max-width: 425px) {
 		display: block;
 	}
 }
+
+
+// .socialLinks li {
+// 	margin-left: 10px;
+// }
+
+// @media (max-width: 425px) {
+// 	// nav {
+// 	// 	position: fixed;
+// 	// 	bottom: 0;
+// 	// 	width: 100%;
+// 	// 	background: white;
+// 	// 	z-index: 200;
+// 	// 	border-top: 1px solid $secondaryColor;
+// 	// 	padding: 10px 0;
+// 	// }
+// 	// nav i {
+// 	// 	font-size: 1.5rem;
+// 	// }
+// 	.socialLinks {
+// 		width: 50%;
+// 		text-align: right;
+// 		display: flex;
+// 		justify-content: space-between;
+// 		li {
+// 			margin: 0;
+// 		}
+// 	}
+// 	// .navLinks::after {
+// 	// 	display: none;
+// 	// }
+// 	// .navLinks li:first-child, .navLinks li:nth-child(2) {
+// 	// 	display: none;
+// 	// }
+// // 	.mobileMenu {
+// // 		display: block;
+// // 	}
+// }
+
+
+
+// .socialLinks a:hover {
+// 	color: $accentColor;
+// 	transition: color 0.3s;
+// }
+
+// .navLinks::after {
+// 	content: '|';
+// 	position: absolute;
+// 	left: 50%;
+// 	transform: translateX(-50%);
+// 	font-weight: 500;
+// }
+
+// .navLinks a {
+// 	padding: 5px 0;
+// 	&:hover {
+// 		font-weight: 800;
+// 	}
+// }
+
+// .navLinks li {
+// 	margin-right: 20px;
+// 	position: relative;
+// }

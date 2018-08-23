@@ -200,6 +200,17 @@ a, input, button {
 
 nav {
   border-bottom: 1px solid #808080; }
+  @media (max-width: 425px) {
+    nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: white;
+      z-index: 200;
+      border-top: 1px solid #808080;
+      padding: 10px 0; }
+      nav i {
+        font-size: 1.5rem; } }
 
 .headerLinks {
   display: -webkit-box;
@@ -215,49 +226,40 @@ nav {
     display: flex;
     padding: 0;
     margin: 15px 0; }
+    .headerLinks ul a {
+      text-decoration: none;
+      color: #000000; }
 
 .navLinks {
   position: relative; }
-
-.navLinks::after {
-  content: '|';
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  font-weight: 500; }
-
-.navLinks a {
-  padding: 5px 0; }
-  .navLinks a:hover {
-    font-weight: 800; }
-
-.navLinks li {
-  margin-right: 20px;
-  position: relative; }
-
-.mobileMenu {
-  display: none; }
+  .navLinks li {
+    margin-right: 20px;
+    position: relative; }
+    .navLinks li a {
+      padding: 5px 0; }
+      .navLinks li a:hover {
+        font-weight: 800; }
+  .navLinks::after {
+    content: '|';
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-weight: 500; }
+  @media (max-width: 425px) {
+    .navLinks::after {
+      display: none; }
+    .navLinks.navLinks li:first-child, .navLinks.navLinks li:nth-child(2) {
+      display: none; } }
 
 .socialLinks li {
   margin-left: 10px; }
-
-.socialLinks a:hover {
-  color: #ce2029;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s; }
+  .socialLinks li a:hover {
+    color: #ce2029;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s; }
 
 @media (max-width: 425px) {
-  nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: white;
-    z-index: 200;
-    border-top: 1px solid #808080;
-    padding: 10px 0; }
-  nav i {
-    font-size: 1.5rem; }
   .socialLinks {
     width: 50%;
     text-align: right;
@@ -268,13 +270,13 @@ nav {
         -ms-flex-pack: justify;
             justify-content: space-between; }
     .socialLinks li {
-      margin: 0; }
-  .navLinks::after {
-    display: none; }
-  .navLinks li:first-child, .navLinks li:nth-child(2) {
-    display: none; }
-  .mobileMenu {
-    display: block; } }
+      margin: 0; } }
+
+.mobileMenu {
+  display: none; }
+  @media (max-width: 425px) {
+    .mobileMenu {
+      display: block; } }
 
 .title {
   text-align: center;
