@@ -38,12 +38,41 @@
 	}
 	@media (max-width: 425px) {
 		column-count: 1;
+		margin-bottom: 30px;
 		p:first-child {
 			margin-top: 15px;
 		}
 		p:last-child {
 			margin-bottom: 0;
 		}
-		margin-bottom: 30px;
+		p:nth-child(2) ~ p {
+			display: none;
+		} 
+	}
+	@media (min-width: 769px) {
+		p:nth-child(2) ~ p {
+			display: block;
+		} 
+	}
+}
+
+.toggleOverflow {
+	display: none;
+	margin: 30px auto;
+	background: none;
+	border: 1px solid $primaryColor;
+	padding: 10px 15px;
+	transition: all 0.3s;
+	text-transform: uppercase;
+	&:hover {
+		color: darken($accentColor, 10);
+		border: 1px solid darken($accentColor, 10);
+		background-color: lighten($accentColor, 40);
+	}
+}
+
+.toggleAboutOverflow {
+	@media (max-width: 425px) {
+		display: block;
 	}
 }

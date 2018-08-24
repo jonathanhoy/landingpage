@@ -81,9 +81,23 @@
 		}
 		&::before {
 			left: -55px;
+			@media (max-width: 500px) and (min-width: 426px) {
+				left: -35px;
+				width: 30%;
+			}
+			@media (max-width: 425px) {
+				left: -60px;
+			}
 		}
 		&::after {
 			right: -55px;
+			@media (max-width: 500px) and (min-width: 426px) {
+				right: -35px;
+				width: 30%;
+			}
+			@media (max-width: 425px) {
+				right: -60px;
+			}
 		}
 	}
 	a {
@@ -104,19 +118,7 @@
 	}
 }
 
-.toggleOverflow {
-	display: none;
-	margin: 30px auto;
-	background: none;
-	border: 1px solid $primaryColor;
-	padding: 10px 15px;
-	transition: all 0.3s;
-	text-transform: uppercase;
-	&:hover {
-		color: darken($accentColor, 10);
-		border: 1px solid darken($accentColor, 10);
-		background-color: lighten($accentColor, 40);
-	}
+.toggleGalleryOverflow {
 	@media (max-width: 768px) {
 		display: block;
 	}

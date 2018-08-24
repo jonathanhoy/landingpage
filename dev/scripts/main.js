@@ -5,13 +5,22 @@ const eventListeners = function() {
 	$('.mobileMenu, .navUpper a').on('click', () => {
 		$('.navUpper').toggleClass('hidden');
 	});
-	$('.toggleOverflow').on('click', () => {
-		if ($('.toggleOverflow').text() === 'Show more') {
+	$('.toggleAboutOverflow').on('click', () => {
+		if ($('.toggleAboutOverflow').text() === 'Read more') {
+			$('p:nth-child(2) ~ p').css('display', 'block');
+			$('.toggleAboutOverflow').text('Read less')
+		} else if ($('.toggleAboutOverflow').text() === 'Read less') {
+			$('p:nth-child(2) ~ p').css('display', 'none');
+			$('.toggleAboutOverflow').text('Read more');
+		};
+	});
+	$('.toggleGalleryOverflow').on('click', () => {
+		if ($('.toggleGalleryOverflow').text() === 'Show more') {
 			$('figure:nth-child(6) ~ figure').css('display', 'block');
-			$('.toggleOverflow').text('Show less')
-		} else if ($('.toggleOverflow').text() === 'Show less') {
+			$('.toggleGalleryOverflow').text('Show less')
+		} else if ($('.toggleGalleryOverflow').text() === 'Show less') {
 			$('figure:nth-child(6) ~ figure').css('display', 'none');
-			$('.toggleOverflow').text('Show more');
+			$('.toggleGalleryOverflow').text('Show more');
 		};
 	});
 };

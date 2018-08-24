@@ -404,7 +404,30 @@ header img {
       .columns p:first-child {
         margin-top: 15px; }
       .columns p:last-child {
-        margin-bottom: 0; } }
+        margin-bottom: 0; }
+      .columns p:nth-child(2) ~ p {
+        display: none; } }
+  @media (min-width: 769px) {
+    .columns p:nth-child(2) ~ p {
+      display: block; } }
+
+.toggleOverflow {
+  display: none;
+  margin: 30px auto;
+  background: none;
+  border: 1px solid #000000;
+  padding: 10px 15px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-transform: uppercase; }
+  .toggleOverflow:hover {
+    color: #a21920;
+    border: 1px solid #a21920;
+    background-color: #f6c4c7; }
+
+@media (max-width: 425px) {
+  .toggleAboutOverflow {
+    display: block; } }
 
 .gallery {
   margin-top: 30px; }
@@ -490,8 +513,22 @@ header img {
       background-color: white; }
     .overlay p::before {
       left: -55px; }
+      @media (max-width: 500px) and (min-width: 426px) {
+        .overlay p::before {
+          left: -35px;
+          width: 30%; } }
+      @media (max-width: 425px) {
+        .overlay p::before {
+          left: -60px; } }
     .overlay p::after {
       right: -55px; }
+      @media (max-width: 500px) and (min-width: 426px) {
+        .overlay p::after {
+          right: -35px;
+          width: 30%; } }
+      @media (max-width: 425px) {
+        .overlay p::after {
+          right: -60px; } }
   .overlay a {
     font-size: 1.2rem;
     text-decoration: none;
@@ -504,22 +541,9 @@ header img {
     .overlay a, .overlay p {
       font-size: 1.6rem; } }
 
-.toggleOverflow {
-  display: none;
-  margin: 30px auto;
-  background: none;
-  border: 1px solid #000000;
-  padding: 10px 15px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-transform: uppercase; }
-  .toggleOverflow:hover {
-    color: #a21920;
-    border: 1px solid #a21920;
-    background-color: #f6c4c7; }
-  @media (max-width: 768px) {
-    .toggleOverflow {
-      display: block; } }
+@media (max-width: 768px) {
+  .toggleGalleryOverflow {
+    display: block; } }
 
 .contact {
   text-align: center;
